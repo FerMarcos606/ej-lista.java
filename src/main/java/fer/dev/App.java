@@ -18,6 +18,7 @@ package fer.dev;
 public class App {
     public static void main(String[] args) {
         WeekDays wd = new WeekDays();
+         wd.createList();
         System.out.println(wd.getDays()); // mostrará null
     }
 }
