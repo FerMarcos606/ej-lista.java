@@ -51,6 +51,17 @@ public class WeekDaysTest {
     assertEquals(0, wd.size(), "Lista debe quedar vacía después de clear");
     }
 
+    @Test
+    void testDevolverDiaSolicitadoDevuelveDiaCorrecto() {
+    WeekDays wd = new WeekDays();
+    wd.createList();
+
+    assertEquals("Lunes", wd.devolverDiaSolicitado("lunes"));
+    assertEquals("Domingo", wd.devolverDiaSolicitado("DOMINGO"));
+    assertNull(wd.devolverDiaSolicitado("Feriado")); // día que no existe
+}
+
+
 }    
   
 

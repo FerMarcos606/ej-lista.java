@@ -25,30 +25,32 @@ public class WeekDays {
         days.add("Sábado");
         days.add("Domingo");
     }
+
     public void clear() {
-    days.clear();
+        days.clear();
     }
-   public void removeDay(String day) {
-    days.remove(day);
+
+    public void removeDay(String day) {
+        days.remove(day);
     }
+
     public int size() {
-    return days.size();
+        return days.size();
     }
 
-
-    
-           public int obtenerSizeLista(List<String> lista) {
+    public int obtenerSizeLista(List<String> lista) {
         return lista.size();
-         }
-//         //Método devolver día solicitado
-//         public String devolverDiaSolicitado(List<String> lista, String dia) {
-//         for (String d : lista) { // recorro la lista
-//             if (d.equalsIgnoreCase(dia)) { // ignora upper y towerCase
-//                 return d;  
-//             }
-//         }
-//         return "No es el día solicitado";  
-//         }
+    }
+
+    public String devolverDiaSolicitado(String dia) {
+        for (String d : days) {
+            if (d.equalsIgnoreCase(dia)) {
+                return d;
+            }
+        }
+         return null;
+    }
+}  
 
 //         // Si contiene el día solicitado
 //         public void mostrarDiaSolicitado(List<String> lista, String dia) {
@@ -65,5 +67,4 @@ public class WeekDays {
 //         lista.sort(String::compareToIgnoreCase);  // ordena ignorando upper y toweCase
 //         return lista;
 //          }
-}
 
