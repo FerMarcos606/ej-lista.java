@@ -15,4 +15,9 @@ package fer.dev;
 //         System.out.println("Hello World!");
 //     }
 // }
-
+public class App {
+    public static void main(String[] args) {
+        WeekDays wd = new WeekDays();
+        System.out.println(wd.getDays()); // mostrará null
+    }
+}

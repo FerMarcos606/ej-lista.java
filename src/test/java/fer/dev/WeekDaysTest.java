@@ -5,12 +5,11 @@ import org.junit.jupiter.api.Test;
 
 public class WeekDaysTest {
 
-
-    @Test
-    void testListaInicialNullOVacia() {
+@Test
+       void testListaInicialNullOVacia() {
         WeekDays wd = new WeekDays();
         assertTrue(wd.getDays() == null || wd.getDays().isEmpty());
     }
-}
+  }
 
 

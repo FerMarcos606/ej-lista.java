@@ -1,16 +1,17 @@
 package fer.dev;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class WeekDays {
+    private List<String> days; // por ahora null
 
-    // Campo privado que guarda la lista de días
-    private List<String> days = new ArrayList<>();
+    public WeekDays() {
+        // No inicializamos, así arranca en null
+        
+    }
 
-    // Método público para obtener la lista de días
     public List<String> getDays() {
         return days;
     }
-
 }
+
