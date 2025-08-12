@@ -1,6 +1,9 @@
 package fer.dev;
 
 import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 
 public class WeekDaysTest {
@@ -74,6 +77,18 @@ void testMostrarDiaSolicitado_DiaExiste() {
         assertEquals("Agosto no está en la lista", wd.mostrarDiaSolicitado("Agosto"));
     }
 
+    @Test
+    void testOrdenarLista() {
+    WeekDays wd = new WeekDays();
+    wd.createList();
+    wd.removeDay("viernes"); 
+    List<String> listaOrdenada = wd.ordenarLista();
+
+    // La lista debería estar ordenada alfabéticamente ignorando mayúsculas
+    List<String> esperado = List.of("Domingo", "Jueves", "Lunes", "Martes", "Sábado", "Viernes");
+
+    assertEquals(esperado, listaOrdenada);
+    }
 
 
 }    

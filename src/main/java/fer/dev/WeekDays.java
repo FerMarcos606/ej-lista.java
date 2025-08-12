@@ -58,14 +58,15 @@ public class WeekDays {
     }
     return dia + " no está en la lista";
 }
+public List<String> ordenarLista() {
+    days.sort(String::compareToIgnoreCase);
+    return days;
+}
+
 
 }  
 
 
 
-//         //Ordenar la lista
-//         public List<String> ordenarLista(List<String> lista) {
-//         lista.sort(String::compareToIgnoreCase);  // ordena ignorando upper y toweCase
-//         return lista;
-//          }
+
 
