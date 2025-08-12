@@ -38,7 +38,7 @@ public class WeekDaysTest {
     wd.removeDay("Jueves");  // elimina "Jueves"
     assertEquals(6, wd.getDays().size(), "Se ha eliminado un día, la lista tiene ahora 6 días");
     assertFalse(wd.getDays().contains("Jueves"), "La lista no debe contener 'Jueves'");
-}
+    }
     @Test
     void testSizeDevuelveTamanioLista() {
     WeekDays wd = new WeekDays();
@@ -59,7 +59,21 @@ public class WeekDaysTest {
     assertEquals("Lunes", wd.devolverDiaSolicitado("lunes"));
     assertEquals("Domingo", wd.devolverDiaSolicitado("DOMINGO"));
     assertNull(wd.devolverDiaSolicitado("Feriado")); // día que no existe
-}
+    }
+    @Test
+void testMostrarDiaSolicitado_DiaExiste() {
+    WeekDays wd = new WeekDays();
+    wd.createList();
+        assertEquals("Martes está en la lista", wd.mostrarDiaSolicitado("Martes"));
+    }
+
+    @Test
+    void testMostrarDiaSolicitado_DiaNoExiste() {
+        WeekDays wd = new WeekDays();
+        wd.createList();
+        assertEquals("Agosto no está en la lista", wd.mostrarDiaSolicitado("Agosto"));
+    }
+
 
 
 }    

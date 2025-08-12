@@ -50,17 +50,18 @@ public class WeekDays {
         }
          return null;
     }
+    public String mostrarDiaSolicitado(String dia) {
+    for (String d : days) {
+        if (d.equalsIgnoreCase(dia)) {
+            return dia + " está en la lista";
+        }
+    }
+    return dia + " no está en la lista";
+}
+
 }  
 
-//         // Si contiene el día solicitado
-//         public void mostrarDiaSolicitado(List<String> lista, String dia) {
-//            if (lista.contains(dia)) { 
-//                System.out.print(dia + "Está en la lista");
-//             }else{
-       
-//         System.out.print(dia + "No está en la lista");
-//          }
-//         }
+
 
 //         //Ordenar la lista
 //         public List<String> ordenarLista(List<String> lista) {
